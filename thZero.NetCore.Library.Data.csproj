@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<AssemblyName>thZero.NetCore.Library.Data</AssemblyName>
+		<PackageId>thZero.NetCore.Library.Data</PackageId>
+		<PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
+		<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+		<Description />
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0.txt</PackageLicenseUrl>
+		<RepositoryUrl>https://github.com/thzero/thZero.NetCore.Library.Data</RepositoryUrl>
+		<RepositoryType>GitHub</RepositoryType>
+		<Authors>thZero.com</Authors>
+		<PackageProjectUrl>https://github.com/thzero/thZero.NetCore.Library.Data</PackageProjectUrl>
+		<Copyright></Copyright>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="..\thZero.NetCore.Library\CommonAssemblyInfo.cs" Link="CommonAssemblyInfo.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\thZero.NetCore.Library\thZero.NetCore.Library.csproj" />
+	</ItemGroup>
+
+</Project>
