@@ -73,9 +73,8 @@ namespace thZero
         #region Public Properties
         public int Count
         {
-            get { return (_count.HasValue ? _count.Value : Items.Count()); }
-
-            set { _count = value; }
+            get => (_count.HasValue ? _count.Value : Items.Count());
+            set => _count = value;
         }
 
         public IEnumerable<T> Items { get; private set; }
