@@ -1,29 +1,29 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+		<TargetFramework>net5.0</TargetFramework>
 		<AssemblyName>thZero.NetCore.Library.Data</AssemblyName>
 		<PackageId>thZero.NetCore.Library.Data</PackageId>
-    <Description></Description>
-    <Authors>thZero.com</Authors>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/thzero/thZero.NetCore.Library.Data</PackageProjectUrl>
+		<Description></Description>
+		<Authors>thZero.com</Authors>
+		<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+		<GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/thzero/thZero.NetCore.Library.Data</PackageProjectUrl>
 		<RepositoryType>GitHub</RepositoryType>
-    <RepositoryUrl>https://github.com/thzero/thZero.NetCore.Library.Data</RepositoryUrl>
+		<RepositoryUrl>https://github.com/thzero/thZero.NetCore.Library.Data</RepositoryUrl>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<Compile Include="..\thZero.NetCore.Library\CommonAssemblyInfo.cs" Link="CommonAssemblyInfo.cs" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\thZero.NetCore.Library\thZero.NetCore.Library.csproj" />
-	</ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\thZero.NetCore.Library\thZero.NetCore.Library.csproj" />
+  </ItemGroup>
 
 </Project>
