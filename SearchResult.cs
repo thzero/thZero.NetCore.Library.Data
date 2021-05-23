@@ -30,14 +30,13 @@ namespace thZero
         {
             if ((filter != null) && filter.PaginationCount.HasValue)
             {
-                list = list.Skip(filter.PaginationStart.HasValue ? filter.PaginationStart.Value : 0);
+                list = list.Skip(filter.PaginationStart ?? 0);
                 list = list.Take(filter.PaginationCount.Value);
             }
 
             return list;
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
         public static SearchResult<TResult> Filter<TResult, TFilter>(TFilter searchFilter, Func<TFilter, IEnumerable<TResult>> dataAction) where TFilter : SearchFilter
         {
             Enforce.AgainstNull<Func<TFilter, IEnumerable<TResult>>>(dataAction, "dataAction");
@@ -46,11 +45,11 @@ namespace thZero
 
             if ((searchFilter != null) && searchFilter.PaginationCount.HasValue)
             {
-                data = data.Skip(searchFilter.PaginationStart.HasValue ? searchFilter.PaginationStart.Value : 0);
+                data = data.Skip(searchFilter.PaginationStart ?? 0);
                 data = data.Take(searchFilter.PaginationCount.Value);
             }
 
-            SearchResult<TResult> results = new SearchResult<TResult>(data);
+            SearchResult<TResult> results = new(data);
             return results;
         }
         #endregion
@@ -73,7 +72,7 @@ namespace thZero
         #region Public Properties
         public int Count
         {
-            get => (_count.HasValue ? _count.Value : Items.Count());
+            get => (_count ?? Items.Count());
             set => _count = value;
         }
 
